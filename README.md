@@ -24,7 +24,10 @@ You need to have the following softwares:
 ### Install Docker
 
 -   [For windows](https://docs.docker.com/docker-for-windows/install/)
--   [For Linux](https://docs.docker.com/docker-for-windows/install/)
+-   For Linux:
+    [Debian](https://docs.docker.com/install/linux/docker-ce/debian/)
+    and
+    [Ubuntu](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
 -   [Mac OS](https://docs.docker.com/docker-for-mac/install/)
 
 #### Check your install
@@ -78,8 +81,7 @@ git config user.email "MY_NAME@example.com"
 
 You can check the local set up: `cat .git/config`
 
-Usage
------
+\#\# Usage
 
 ### Clone the repository
 

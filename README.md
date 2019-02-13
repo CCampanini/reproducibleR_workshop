@@ -94,12 +94,13 @@ Docker environment.
 In your project root, you can run:
 
 ``` bash
-#Initialize a git repository
-git init
 # Set up your identity
 git config user.name "FirstName LastName"
 git config user.email "MY_NAME@example.com"
 ```
+
+Note that if you are not in the git repository, you have initialize it
+before to run the above command. It is done as simply as `git init`.
 
 You can check the local set up: `cat .git/config`
 

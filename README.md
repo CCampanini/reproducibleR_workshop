@@ -49,8 +49,13 @@ docker run -e PASSWORD=<YOUR_PASS> --rm -p 8787:8787 rocker/verse
 Once you have downloaded it, you can open an Rstudio session in your web
 browser. On Linux system, it will be at <http://localhost:8787/>. On
 other systems, `localhost` will be replaced by your ip address. Your
-will find it when you launch the Docker Quickstart Terminal. Please see
-[this
+will find it when you launch the Docker Quickstart Terminal.
+
+Rstudio will ask you for a username and a password. The username is
+`rstudio` by default and the password is the one that you specified in
+the above command.
+
+Please see [this
 tutorial](http://ropenscilabs.github.io/r-docker-tutorial/02-Launching-Docker.html)
 for more details.
 

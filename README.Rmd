@@ -68,9 +68,21 @@ for more details.
 
 ### Pointing a Docker session to your project 
 
+The above command created an container isolated from your hard disk and all
+that you have created is erased when you close your Docker container.
+
+Although, we often need files and data that are in a project directory. This can
+be be done with the `-v` flag (v for volume). The part on the left (before `:`)
+indicates the path on your computer (can be replaced by `$(pwd)` if it is the
+current directory), and the right side (after `:`) indicates the path in the
+container (should always begin by `/home/rstudio/`).
+
+
 ```{bash}
 docker run -e PASSWORD=<YOUR_PASS> --rm -p 8787:8787 -v /path_to_your_project/project_directory:/home/rstudio/project_directory rocker/verse
 ```
+More details can be found
+[here](https://ropenscilabs.github.io/r-docker-tutorial/02-Launching-Docker.html).
 
 
 ### Commit with git inside a docker container
@@ -85,6 +97,9 @@ environment.
 In your project root, you can run:
 
 ```{bash}
+#Initialize a git repository
+git init
+# Set up your identity
 git config user.name "FirstName LastName"
 git config user.email "MY_NAME@example.com"
 
@@ -101,6 +116,30 @@ git clone https://github.com/alaindanet/reproducibleR_workshop.git dir_name
 ```
 
 ### Compile the presentation
+
+
+#### Build the Docker image
+
+You can see that there is a `Dockerfile` in the repository. The `Dockerfile`
+contains all the informations necessary to install all dependencies that is
+needed to execute your code. In this specific case, it contains intructions to
+install packages necessary to compile the Rmd presentation in a pdf beamer 
+presentation.
+ 
+The following command will execute all the command in the `Dockerfile` and store
+it as an image that we have to name to call it later (Let's name it `workshop_image`):
+
+```{bash}
+docker build -t workshop_image .
+```
+
+Now you can run Docker with the image that we have just created: 
+
+```{bash}
+docker run -e PASSWORD=<YOUR_PASS> --rm -p 8787:8787 -v $(pwd):/home/rstudio/project workshop_image:latest
+```
+
+#### Compile
 
 Open the file `talk/talk.Rmd` in Rstudio and knit it or you can run this command
 in your R console:

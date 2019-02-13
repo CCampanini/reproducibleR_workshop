@@ -4,10 +4,6 @@ author: Alain Danet
 date: \today
 institute: BioDICée Lab
 output: binb::metropolis
-vignette: >
-  %\VignetteIndexEntry{Vignette Title}
-  %\VignetteEngine{knitr::rmarkdown}
-  %\VignetteEncoding{UTF-8}
 ---
 
 ```{r, eval = TRUE, echo = FALSE}

@@ -24,6 +24,9 @@ You need to have the following softwares:
 ### Install Docker
 
 -   [For windows](https://docs.docker.com/docker-for-windows/install/)
+    ([get the executable
+    here](https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe).
+    Otherwise, they will try to make you create an account on Dockerhub)
 -   For Linux:
     [Debian](https://docs.docker.com/install/linux/docker-ce/debian/)
     and

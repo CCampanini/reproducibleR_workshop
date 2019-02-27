@@ -1,8 +1,8 @@
 ---
 title: Reproducible Science with R
-author: Alain Danet 
+author: Alain Danet / https://alaindanet.github.io
 date: \today
-institute: BioDICée Lab
+institute: CESCO Lab / MNHN
 output: binb::metropolis
 ---
 
@@ -48,8 +48,8 @@ library(devtools)
 
 options(devtools.name = "Alain Danet", 
 	devtools.desc.author = "person('Alain', 'Danet',
-	email='my_name@domain.fr', role = c('aut', 'cre'))",
-devtools.desc.license = "MIT + file LICENSE")
+	email='alain.danet@mnhn.fr', role = c('aut', 'cre'))",
+devtools.desc.license = "file LICENSE")
 
 setup() #See also create()
 
